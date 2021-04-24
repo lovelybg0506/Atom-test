@@ -1,29 +1,32 @@
-<!doctype html> <!-- 관용적으로 사용 -->
+<!doctype html>
 <html>
 <head>
-  <title>Euphonium(개요)</title> <!-- 탭에 적히는 제목 -->
+  <title>Euphonium(개요)</title>
 <style media="screen">
   #h1Eup{
     color: gray;
   }
 </style>
-  <meta charset="utf-8"> <!-- utf-8 로 문서를 읽어라 -->
+  <meta charset="utf-8">
   <link rel="stylesheet" href="eupstyle.css">
 </head>
-<body>
+<body>  <!-- target의 활용과 this의 활용 -->
   <h1><a id="h1Eup">Euphonium</a></h1>
-  <input id="night_day" type="BUTTON" value="night" onclick="
-  if(document.querySelector('#night_day').value === 'night'){
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    document.querySelector('#night_day').value = 'day';
+  <input type="BUTTON" value="night" onclick="
+  var target =  document.querySelector('body');
+  if(this.value === 'night'){
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
   }else{
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-    document.querySelector('#night_day').value = 'night';
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
   }
   ">
-  <ol>  <!-- 부모태그인 ul,ol은 반드시 li를 가지고있어야 한다. -->
+
+
+  <ol>
     <li><a href="Euphonium(개요).html" class="saw" id="active" target="_blank">개요</a></li> <!--ul = UnorderedList, ol = OrderedList -->
     <li><a href="Euphonium(장단점).html" class="saw" target="_blank">장단점</a></li>
     <li><a href="Euphonium(유형).html" class="saw" target="_blank">Euphonium의 유형</a></li>
@@ -40,5 +43,18 @@
   튜바족 악기로 형태는 튜바를 축소해놓은 모양으로 생겼으며, 같은 튜바족 악기인 바리톤과 비슷하게 생겼다. 바리톤과의 차이점은 바리톤이 좀 더 작고 관이 좁아 유포니움에 비하여 높은 음을 낼 수 있는 정도. 그로인하여 음의 차이는 거의 없으나 바리톤은 높은음자리표의 악보를, 유포니움은 낮은음자리표 악보를 보고 읽는다. 아마추어 단위에선 맨날 바리톤 악보를 보고 연주하기 때문에 높은음자리표로 연주하는 경우가 훨씬 많다. 실제로 외관만으로는 처음 본 사람들은 구분하기 힘들며 유포니움이 잘 쓰이는 군악대 등에서도 그냥 유포니움에 비해 발음하기 쉽다는 이유 하나만으로 바리톤이라고 불러 버리는 경우도 많다. 실제 군악대에서 유포니움을 맡게되어 파트 악보를 받으면 악보상 파트의 이름이 바리톤으로 나오는 경우가 많으며,[3] 비슷한 음역대이기 때문에 연주에 크게 문제는 없다.</p>
 <p style ="margin-top:45px;">
 한국에서의 euphonium의 명칭 표기법 또한 제각각인데, 외래어 표기법에 의하면 '유포니움'이 바른 표기이다. 한국의 취주악 오케스트라에서는 대개 '유포늄' 혹은 '우포늄'으로 통칭되고 있으며 '유폰'이라고 줄여 부르기도 한다. 한편 애니메이션 울려라! 유포니엄의 한국 정발 명칭은 '유포니엄'이라는 표기를 사용하고 있지만, 일본에서도 유포니엄(ユーフォニアム), 유포니움(ユーフォニウム), 유포늄(ユーフォニューム) 등이 혼재되어 있다. 최근 일본에서는 '유포니엄(ユーフォニアム)'이라는 표기로 일반화되고 있다고. 본 문서는 외래어 표기법을 기준으로 '유포니움'이라는 명칭을 사용한다.</p>
+
+<input type="BUTTON" value="night" onclick="
+if(this.value === 'night'){
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  this.value = 'day';
+}else{
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  this.value = 'night';
+}
+">
+
 </body>
 </html>
