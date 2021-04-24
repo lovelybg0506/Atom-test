@@ -2,15 +2,31 @@
 <html>
 <head>
   <title>Euphonium(개요)</title> <!-- 탭에 적히는 제목 -->
+<style media="screen">
+  #h1Eup{
+    color: gray;
+  }
+</style>
   <meta charset="utf-8"> <!-- utf-8 로 문서를 읽어라 -->
   <link rel="stylesheet" href="eupstyle.css">
 </head>
 <body>
-  <h1><a>Euphonium</a></h1>
+  <h1><a id="h1Eup">Euphonium</a></h1>
+  <input id="night_day" type="BUTTON" value="night" onclick="
+  if(document.querySelector('#night_day').value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'day';
+  }else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day').value = 'night';
+  }
+  ">
   <ol>  <!-- 부모태그인 ul,ol은 반드시 li를 가지고있어야 한다. -->
     <li><a href="Euphonium(개요).html" class="saw" id="active" target="_blank">개요</a></li> <!--ul = UnorderedList, ol = OrderedList -->
     <li><a href="Euphonium(장단점).html" class="saw" target="_blank">장단점</a></li>
-    <li><a href="Euphonium(유형).html" target="_blank">Euphonium의 유형</a></li>
+    <li><a href="Euphonium(유형).html" class="saw" target="_blank">Euphonium의 유형</a></li>
     </ol>
     <hr>
   <h2>Euphonium의 개요</h2>
