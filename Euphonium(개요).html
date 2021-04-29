@@ -8,45 +8,15 @@
   }
 </style>
   <meta charset="utf-8">
-  <script> /* 함수는 수납상자 */
-    function nightDayHandler(self){
-      var target =  document.querySelector('body');
-      if(self.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        self.value = 'day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
-        }
-
-      }else{
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        self.value = 'night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'blue';
-          i = i + 1;
-        }
-      }
-  }
-  </script>
+  <script src="colors.js"></script>
   <link rel="stylesheet" href="eupstyle.css">
 </head>
 <body>  <!-- target의 활용과 this의 활용 ,a태그 전체의 색 변경-->
   <h1><a id="h1Eup">Euphonium</a></h1>
    <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this)
+    nightDayHandler(this);
    ">
-   <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this)
-   ">
+
 
   <ol>
     <li><a href="Euphonium(개요).html" class="saw" id="active" target="_blank">개요</a></li> <!--ul = UnorderedList, ol = OrderedList -->
