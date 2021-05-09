@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle(); // fadeToggle은 클릭했을때 요소가 있으면 사라지게하고, 없으면 나타나게합니다.
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+
+    $("p").toggle(300);
+    
+    $("#div4").fadeTo(300,0.3); // fadeTo(시간초,투명도설정)
+    $("#div5").fadeTo(300,0.7); //
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button>Click to fade in/out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:skyblue;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:pink;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:darkgray;"></div>
+<br>
+<div id="div4" style="width:80px;height:80px;background-color:black;"></div>
+<br>
+<div id="div5" style="width:80px;height:80px;background-color:black;"></div>
+
+</body>
+</html>
