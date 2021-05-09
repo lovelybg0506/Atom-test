@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#toggle_btn").click(function(){
+    $("p.one").toggle("slow"); // 1000=1초 단위를 써도되지만, fast,slow를 입력해도 된다.
+  });
+});
+</script>
+</head>
+<body>
+
+<p class="one">버튼 하나로 Hide,Show 둘다 사용하기</p>
+<button id="toggle_btn">ToggleKey</button>
+
+<p>This is a paragraph with little content.</p>
+<p class="one">This is another small paragraph.</p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide_btn").click(function(){
+    $("p").hide(300); // hide,show () 괄호안에 1000=1초 단위를 넣으면 시간에맞춰 사라지고 생김
+   });
+
+  $("#show_btn").click(function(){
+    $("p").show(300);
+  });
+
+});
+</script>
+</head>
+<body>
+
+<button id="hide_btn">Hide</button>
+<button id="show_btn">Show</button>
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>
